@@ -1,0 +1,7 @@
+greengrass-cli deployment create \
+    --recipeDir ~/components/recipe \
+    --artifactDir ~/components/artifacts \
+    --groupId OHMIOBOXES \
+    --merge "com.ohmio.readpower=1.0.0" 
+
+"Uri": "s3://EXAMPLE_BUCKET/artifacts/com.example.HelloWorld/1.0.0/hello_world.py"

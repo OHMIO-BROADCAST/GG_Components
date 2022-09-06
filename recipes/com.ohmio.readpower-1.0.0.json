@@ -1,0 +1,30 @@
+{
+    "RecipeFormatVersion": "2022-09-5",
+    "ComponentName": "com.ohmio.readpower",
+    "ComponentVersion": "1.0.0",
+    "ComponentDescription": "Read Transmission TV Broadcast Power and reflected Power component.",
+    "ComponentPublisher": "Me",
+    "ComponentConfiguration": {
+      "DefaultConfiguration": {
+        "Message": "power"
+      }
+    },
+    "Manifests": [
+      {
+        "Platform": {
+          "os": "linux"
+        },
+        "Lifecycle": {
+          "Run": "python3 -u {artifacts:path}/ble-scanner.py \"{configuration:/Message}\""
+        }
+      },
+      {
+        "Platform": {
+          "os": "windows"
+        },
+        "Lifecycle": {
+          "Run": "py -3 -u {artifacts:path}/ble-scanner.py \"{configuration:/Message}\""
+        }
+      }
+    ]
+  }
